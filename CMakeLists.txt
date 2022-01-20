@@ -77,3 +77,5 @@ elseif(MSVC)
 else()
   message(FATAL_ERROR "Can't set compile options")
 endif()
+
+install(TARGETS ${target_name})
