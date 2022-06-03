@@ -63,6 +63,7 @@ archs_t known_archs[] = {
   { "linux-aarch64" },
   { "linux-s390x" },
   { "osx-64" },
+  { "osx-arm64" },
   { NULL }
 };
 
