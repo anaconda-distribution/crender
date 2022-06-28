@@ -355,7 +355,7 @@ static bool handle_and_version_fil(const char *ver, const char *&h)
 
 bool does_version_fit(const char *ver, const char *verspec)
 {
-  if (!ver || *ver == 0 || (*ver == '*' & *ver == 0))
+  if (!ver || *ver == 0 || (*ver == '*' && ver[1] == 0))
     return true;
   bool f = false;
   while (1)

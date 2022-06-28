@@ -642,8 +642,8 @@ void info_add_output_envp(const char *pkname, const char *version, const char *e
       if (nstr == version)
       {
         const YAML::Node &nn = n[version];
-        //size_t nz2 = nn.size();
-        for (size_t j = 0; j < 0; j++)
+        size_t nz2 = nn.size();
+        for (size_t j = 0; j < nz2; j++)
         {
           nstr = cr_get_config_str(nn, j, "");
           if (nstr == env)
@@ -815,10 +815,9 @@ static bool has_requires(const YAML::Node &pk, const char *dep, bool check_m2)
     return true;
   if (has_requires_pkg_in("run", pk, dep, check_m2))
     return true;
-  if (pk["requirements"].IsSequence())
-    if (has_requires_pkg_in("", pk, dep, check_m2))
-        return true;
-    return false;
+  if (pk["requirements"].IsSequence() && has_requires_pkg_in("", pk, dep, check_m2))
+    return true;
+  return false;
 }
 
 // loop over a given sequence of package names and
