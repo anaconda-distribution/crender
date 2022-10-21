@@ -244,12 +244,12 @@ bool cr_read_file(const char *fname, std::string &fcontent, bool do_preprocess, 
       jinja2::ArgInfo{ "subpackage_name" },
       jinja2::ArgInfo{ "min_pin", false, "x.x.x.x.x.x" },
       jinja2::ArgInfo{ "max_pin", false, "x" },
-      jinja2::ArgInfoT<bool>{ "exact", false, 0});
+      jinja2::ArgInfoT<bool>{ "exact", false, false});
   params["pin_compatible"] = jinja2::MakeCallable(expand_pin_subpackage,
       jinja2::ArgInfo{ "subpackage_name" },
       jinja2::ArgInfo{ "min_pin", false, "x.x.x.x.x.x" },
       jinja2::ArgInfo{ "max_pin", false, "x" },
-      jinja2::ArgInfoT<bool>{ "exact", false, 0 });
+      jinja2::ArgInfoT<bool>{ "exact", false, false });
   params["ccache"] = jinja2::MakeCallable(expand_ccache,
       jinja2::ArgInfo{ "method", false, "none" });
   // base python conversion routines
