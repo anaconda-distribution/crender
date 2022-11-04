@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 ## [yy.ddd] - tbd
 - Nothing yet...
 
+## [0.5] - 2022-11-04
+- Fix default value for implicit conversion.
+
 ## [0.4] - 2022-02-02
 - Update for osx-arm64, ppc64le.
 
