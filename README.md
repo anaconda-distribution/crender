@@ -4,7 +4,7 @@ CRENDER
 Version
 -------
 
-This is version 0.4.
+This is version 0.5.
 
 General
 -------
